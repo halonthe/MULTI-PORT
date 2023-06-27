@@ -289,10 +289,10 @@ echo "   - Backup & Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> About " | tee -a log-install.txt
-echo "   - 1st Dev/main            : Alexxa" | tee -a log-install.txt" | tee -a log-install.txt
-echo "   - 2st Dev                 : Halonthe" | tee -a log-install.txt" | tee -a log-install.txt
-echo "   - 3st Dev                 : Efull" | tee -a log-install.txt" | tee -a log-install.txt
-echo "   - Script Design By        : Sophie Marten (Sofi & Maryoto Tentrem)" | tee -a log-install.txt" | tee -a log-install.txt
+echo "   - 1st Dev/main            : Alexxa" | tee -a log-install.txt
+echo "   - 2st Dev                 : Halonthe" | tee -a log-install.txt
+echo "   - 3st Dev                 : Efull" | tee -a log-install.txt
+echo "   - Script Design By        : Sophie Marten (Sofi & Maryoto Tentrem)" | tee -a log-install.txt
 echo "   - Contact (Only Text)     : t.me/halonthe" | tee -a log-install.txt
 echo "------------------------------------------------------------"
 echo ""
