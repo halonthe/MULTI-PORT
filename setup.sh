@@ -205,6 +205,12 @@ sleep 2
 clear
 wget https://raw.githubusercontent.com/halonthe/MULTI-PORT/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
+#Instal IPSEC
+echo -e "$green[INFO]$NC Install IPSEC!"
+sleep 2
+clear
+wget https://raw.githubusercontent.com/halonthe/MULTI-PORT/main/ssh/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh
+clear
 wget https://raw.githubusercontent.com/halonthe/MULTI-PORT/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
 wget https://raw.githubusercontent.com/halonthe/MULTI-PORT/main/websocket/insshws.sh && chmod +x insshws.sh && ./insshws.sh
