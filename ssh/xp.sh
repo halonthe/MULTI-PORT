@@ -67,6 +67,39 @@ red "Permission Denied!"
 exit 0
 fi
 
+##----- Auto Remove L2TP
+data=( `cat /var/lib/crot/data-user-l2tp | grep '^#!' | cut -d ' ' -f 2 | sort | uniq`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+exp=$(grep -w "^#! $user" "/var/lib/crot/data-user-l2tp" | cut -d ' ' -f 3 | sort | uniq)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" -le "0" ]]; then
+sed -i "/^#! $user $exp/d" "/var/lib/alexxa/data-user-l2tp"
+sed -i '/^"'"$user"'" l2tpd/d' /etc/ppp/chap-secrets
+sed -i '/^'"$user"':\$1\$/d' /etc/ipsec.d/passwd
+chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
+fi
+done
+
+##----- Auto Remove PPTP
+data=( `cat /var/lib/crot/data-user-pptp | grep '^#!' | cut -d ' ' -f 2 | sort | uniq`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+exp=$(grep -w "^#! $user" "/var/lib/crot/data-user-pptp" | cut -d ' ' -f 3 | sort | uniq)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" -le "0" ]]; then
+sed -i "/^#! $user $exp/d" "/var/lib/alexxa/data-user-pptp"
+sed -i '/^"'"$user"'" pptpd/d' /etc/ppp/chap-secrets
+chmod 600 /etc/ppp/chap-secrets*
+fi
+done
+
 ##----- Auto Remove Vmess
 data=( `cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
 now=`date +"%Y-%m-%d"`
