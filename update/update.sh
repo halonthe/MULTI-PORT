@@ -31,6 +31,7 @@ wget -q -O /usr/bin/menu-dns "https://raw.githubusercontent.com/halonthe/MULTI-P
 wget -q -O /usr/bin/info "https://raw.githubusercontent.com/halonthe/MULTI-PORT/main/update/info.sh" && chmod +x /usr/bin/info
 wget -q -O /usr/bin/mspeed "https://raw.githubusercontent.com/halonthe/MULTI-PORT/main/update/menu-speedtest.sh" && chmod +x /usr/bin/mspeed
 wget -q -O /usr/bin/mbandwith "https://raw.githubusercontent.com/halonthe/MULTI-PORT/main/update/menu-bandwith.sh" && chmod +x /usr/bin/mbandwith
+wget -q -O /usr/bin/mbandwith "https://raw.githubusercontent.com/halonthe/MULTI-PORT/main/update/menu-ipsec.sh" && chmod +x /usr/bin/menu-ipsec
 wget -q -O /usr/bin/update "https://raw.githubusercontent.com/halonthe/MULTI-PORT/main/update/update.sh" && chmod +x /usr/bin/update
 echo -e " [INFO] Update Successfully"
 sleep 2
