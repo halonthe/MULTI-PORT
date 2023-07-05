@@ -205,6 +205,10 @@ sleep 1
 systemctl restart xray
 echo -e " $COLOR1 ${NC}  [INFO] • Restarting Xray Services            $COLOR1 ${NC}"
 sleep 1
+systemctl restart ipsec
+systemctl restart xl2tpd
+echo -e " $COLOR1 ${NC}  [INFO] • Restarting IPSEC Services            $COLOR1 ${NC}"
+sleep 1
 systemctl restart cron
 echo -e " $COLOR1 ${NC}  [INFO] • Restarting Cron Services            $COLOR1 ${NC}"
 echo -e " $COLOR1 ${NC}  [INFO] • All Services Restates Successfully  $COLOR1 ${NC}"
