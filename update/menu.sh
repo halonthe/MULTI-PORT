@@ -188,6 +188,7 @@ echo -e "  ${COLOR1}[03]${NC} • VLESS   [${YELLOW}${status_xray}${NC}]   ${COL
 echo -e "  ${COLOR1}[04]${NC} • TROJAN  [${YELLOW}${status_xray}${NC}]   ${COLOR1}[10]${NC} • RENEW CERT       $COLOR1 $NC"  
 echo -e "  ${COLOR1}[05]${NC} • SS WS   [${YELLOW}ON${NC}]   ${COLOR1}[11]${NC} • SETTINGS [${YELLOW}Menu${NC}]  $COLOR1 $NC"
 echo -e "  ${COLOR1}[06]${NC} • SET DNS [${YELLOW}Menu${NC}] ${COLOR1}[12]${NC} • INFO     [${YELLOW}Menu${NC}]  $COLOR1 $NC"
+echo -e "  ${COLOR1}[99]${NC} • IPSEC [${YELLOW}Menu${NC}]$COLOR1 $NC"
 if [ "$Isadmin" = "ON" ]; then
 echo -e "                                                  $COLOR1 $NC"
 echo -e "  ${COLOR1}[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1 $NC"
@@ -244,6 +245,7 @@ case $opt in
 06 | 7) clear ; menu-theme ;;
 07 | 8) clear ; menu-backup ;;
 09 | 9) clear ; add-host ;;
+99) clear ; menu-ipsec ;;
 10) clear ; crtxray ;;
 11) clear ; menu-set ;;
 12) clear ; info ;;
